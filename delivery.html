@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <title>Bootstrap Sass &amp; JS</title>
+</head>
+<body>
+<nav class="main-nav bg-success border-bottom d-none d-xl-flex ">
+    <div class="container d-flex align-items-center flex-wrap">
+        <a href="./index.html" class="header_home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_10_2080)">
+                    <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="white"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_10_2080">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+        <ul class="nav me-auto nav_header">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    Каталог
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.05025 1.21725L6 6.16699L10.9497 1.21724" stroke="white" stroke-width="2"/>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Проводные терморегуляторы</a></li>
+                    <li><a class="dropdown-item" href="#">Термоэлектрические приводы</a></li>
+                    <li><a class="dropdown-item" href="#">Интернет термостаты</a></li>
+                    <li><a class="dropdown-item" href="#">Дистанционное управление</a></li>
+                    <li><a class="dropdown-item" href="#">Проводная система управления</a></li>
+                    <li><a class="dropdown-item" href="#">Регуляторы управления насосом</a></li>
+                    <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                    <li><a class="dropdown-item" href="#">Беспроводные термостаты</a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="./about.html" class="nav-link link-body-emphasis px-2">О компании</a></li>
+            <li class="nav-item"><a href="./posts.html" class="nav-link link-body-emphasis px-2">Статьи</a></li>
+            <li class="nav-item"><a href="./services.html" class="nav-link link-body-emphasis px-2">Услуги</a></li>
+            <li class="nav-item"><a href="./delivery.html" class="nav-link link-body-emphasis px-2">Доставка и оплата</a></li>
+            <li class="nav-item"><a href="./contacts.html" class="nav-link link-body-emphasis px-2">Контакты</a></li>
+
+        </ul>
+        <ul class="nav">
+            <li class="nav-item"><a href="./app.html" class="nav-link link-body-emphasis  app">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3678)">
+                        <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"
+                              fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3678">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Приложение ENGO</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="overlay"></div>
+<header class="border-bottom header">
+    <div class="container d-flex align-items-center justify-content-between header-wrp">
+        <a href="./index.html" class="d-flex align-items-center  link-body-emphasis text-decoration-none logo">
+            <img src="./img/engo_gray.png" alt="">
+        </a>
+
+        <div class="d-none align-items-center d-xl-flex header__contacts">
+            <a href="tel:+74956652920" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3664)">
+                        <path d="M20.1916 15.38C18.9616 15.38 17.7716 15.18 16.6616 14.82C16.3116 14.7 15.9216 14.79 15.6516 15.06L14.0816 17.03C11.2516 15.68 8.60164 13.13 7.19164 10.2L9.14164 8.54C9.41164 8.26 9.49164 7.87 9.38164 7.52C9.01164 6.41 8.82164 5.22 8.82164 3.99C8.82164 3.45 8.37164 3 7.83164 3H4.37164C3.83164 3 3.18164 3.24 3.18164 3.99C3.18164 13.28 10.9116 21 20.1916 21C20.9016 21 21.1816 20.37 21.1816 19.82V16.37C21.1816 15.83 20.7316 15.38 20.1916 15.38Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3664">
+                            <rect width="24" height="24" fill="white" transform="translate(0.181641)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                +7 (495) 665-29-20
+            </a>
+            <a href="mailto:info@engo-russia.ru" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_41_2403)">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_41_2403">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                info@engo-russia.ru
+            </a>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 gap-xl-8">
+            <form class=" header_search header_search-main" role="search">
+                <input type="search" class="d-xl-block d-none" placeholder="Поиск по сайту" aria-label="Search">
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                              fill="#9898A0"/>
+                    </svg>
+                </button>
+            </form>
+
+            <a href="./cartPage.html" class="cart">
+                <div class="cart__btn position-relative">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                              fill="#969696"/>
+                    </svg>
+                    <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger text-white fw-semibold">
+                    3
+                </span>
+                </div>
+                <div class="fw-medium d-none d-xl-block">
+                    Корзина
+                </div>
+            </a>
+            <button class="navbar-toggler d-xl-none d-block collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10H35V13H5V10Z" fill="black"/>
+                    <path d="M5 18H35V21H5V18Z" fill="black"/>
+                    <path d="M5 26H35V29H5V26Z" fill="black"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse mobile-panel" id="navbarNav">
+        <form class="w-100 mb-3  header_search" role="search">
+            <input type="search" class="" placeholder="Поиск по сайту" aria-label="Search">
+            <button>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                          fill="#9898A0"/>
+                </svg>
+            </button>
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item dropdown"> <!-- Добавьте класс dropdown для элемента меню -->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Каталог
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.05025 1.21725L6 6.16699L10.9497 1.21724" stroke="#575756" stroke-width="2"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu position-static" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Проводные терморегуляторы</a>
+                    <a class="dropdown-item" href="#">Термоэлектрические приводы</a>
+                    <a class="dropdown-item" href="#">Интернет термостаты</a>
+                    <a class="dropdown-item" href="#">Дистанционное управление</a>
+                    <a class="dropdown-item" href="#">Проводная система управления</a>
+                    <a class="dropdown-item" href="#">Регуляторы управления насосом</a>
+                    <a class="dropdown-item" href="#">Аксессуары</a>
+                    <a class="dropdown-item" href="#">Беспроводные термостаты</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+        </ul>
+        <a href="#" class="nav-link link-body-emphasis text-success app-mob">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_60_3678)">
+                    <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_60_3678">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            Приложение ENGO</a>
+
+        <div class="divider"></div>
+
+        <div class="d-flex flex-column mobile-panel-cont">
+            <a href="tel:+74956652920" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3664)">
+                        <path d="M20.1916 15.38C18.9616 15.38 17.7716 15.18 16.6616 14.82C16.3116 14.7 15.9216 14.79 15.6516 15.06L14.0816 17.03C11.2516 15.68 8.60164 13.13 7.19164 10.2L9.14164 8.54C9.41164 8.26 9.49164 7.87 9.38164 7.52C9.01164 6.41 8.82164 5.22 8.82164 3.99C8.82164 3.45 8.37164 3 7.83164 3H4.37164C3.83164 3 3.18164 3.24 3.18164 3.99C3.18164 13.28 10.9116 21 20.1916 21C20.9016 21 21.1816 20.37 21.1816 19.82V16.37C21.1816 15.83 20.7316 15.38 20.1916 15.38Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3664">
+                            <rect width="24" height="24" fill="white" transform="translate(0.181641)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                +7 (495) 665-29-20
+            </a>
+            <a href="mailto:info@engo-russia.ru" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_41_2403)">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_41_2403">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                info@engo-russia.ru
+            </a>
+        </div>
+        <ul class="d-flex gap-3 mt-3" style="margin-bottom: 0">
+            <li><a href="#"><img src="./img/socials.svg" alt=""></a>
+            </li>
+            <li><a href="#"><img src="./img/socials-1.svg" alt=""></a>
+            </li>
+            <li><a href="#"><img src="./img/socials-2.svg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mob-search d-none">
+        <div class="d-flex align-items-center gap-4" style="padding: 0 18px">
+            <svg class="header_search-back pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7L3.83 7L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9L16 9V7Z" fill="#979797"/>
+            </svg>
+            <form class="w-100 header_search " role="search">
+                <input type="search" class="" placeholder="Поиск по сайту" aria-label="Search">
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                              fill="#9898A0"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+
+<main>
+
+
+    <div class="bannerWithImg" style="background: url('./img/cargodelivery.jpg') center/cover no-repeat">
+        <div class="bannerWithImg-box">
+            <div class="container">
+                <ul class="bread">
+                    <li>
+                        <a class="bread__link" href="#">Главная</a>
+                    </li>
+                    <li>
+                        <a class="bread__link" href="#">Доставка и оплата</a>
+                    </li>
+                </ul>
+
+                <div class="bannerWithImg-wrp">
+                    <div class="bannerWithImg-title">Доставка и оплата</div>
+                    <div class="bannerWithImg-subtt">Наш интернет магазин Engo-Russia.ru предлагает для&nbsp;вас
+                        различные
+                        варианты доставки и оплаты товаров
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="delivery ">
+            <div class="delivery__l">
+                <h1>Доставка</h1>
+                <h3>1. Самовывоз</h3>
+                <p>Выбранный вами товар компании Engo Controls можно получить самостоятельно в нашем пункте выдачи, по
+                    адресу: 111123, Россия, г. Москва, ул. 1-я Владимирская, д. 10А.</p>
+                <h3>2. Курьерская доставка</h3>
+                <p>Курьерская доставка осуществляется в день обращения или на следующий день после принятия заказа по
+                    Москве
+                    и Московской области, при условии наличия товара на складе. В случае, если товар заказной, то
+                    менеджер
+                    дополнительно сообщит Покупателю сроки поставки оборудования Engo Controls.</p>
+                <p>Доставка осуществляется до подъезда покупателя. С момента приезда по адресу Получателя, совокупное
+                    время
+                    ожидания Курьером Получателя и продолжительности доставки не должно превышать 15 минут. Стоимость
+                    доставки в пределах МКАД составляет 500 руб.</p>
+                <p>Все остальные направления по доставке рассчитываются индивидуально. Стоимость рассчитают менеджеры.
+                    При
+                    получении товара Покупателю необходимо проверить внешний вид товара на предмет царапин, сколов и
+                    других
+                    механических повреждений, проверить комплектность товара и, если нареканий нет, оплатить и принять
+                    товар.</p>
+                <p>После приемки товара Покупателем, Продавец не принимает претензий по ассортименту, внешнему виду и
+                    количеству.</p>
+                <p>Минимальная сумма заказа для выполнения курьерской доставки товара в нашем магазине составляет 5000
+                    рублей.</p>
+
+                <h3>3. Доставка транспортной компанией (ТК «Деловые линии» или «СДЭК») в любой регион России.</h3>
+                <p>Доставка осуществляется только после 100% оплаты. Возможны различные варианты доставки — до&nbsp;квартиры,
+                    работы, в пункт выдачи транспортной компании.</p>
+                <p>Стоимость и сроки доставки, необходимо уточнять у менеджеров или транспортной компании. Стоимость
+                    доставки и передача в транспортную компанию — 500 руб.</p>
+                <h3>4. Бесплатная доставка</h3>
+                <p>При сумме заказа свыше 30 000 рублей доставка осуществляется бесплатно (действует для зоны Москва
+                    внутри
+                    МКАД или доставка и передача в транспортную компанию).</p>
+                <h1>Способы оплаты</h1>
+                <ul class="withDots withDots-success">
+                    <li>Наличными курьеру при получении товара.</li>
+                    <li>Наличными в пункте выдачи при получении товаров.</li>
+                    <li>Безналичный расчет. Для выставления счета необходимо прислать реквизиты на нашу электронную
+                        почту.
+                    </li>
+                </ul>
+
+                <div class="warn">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" rx="18" fill="#95C11F"/>
+                        <path d="M19.7383 10L19.4336 21.2031H16.5742L16.2617 10H19.7383ZM18.0039 26.2031C17.4883 26.2031 17.0456 26.0208 16.6758 25.6562C16.306 25.2865 16.1237 24.8437 16.1289 24.3281C16.1237 23.8177 16.306 23.3802 16.6758 23.0156C17.0456 22.651 17.4883 22.4687 18.0039 22.4687C18.4987 22.4687 18.9336 22.651 19.3086 23.0156C19.6836 23.3802 19.8737 23.8177 19.8789 24.3281C19.8737 24.6719 19.7826 24.987 19.6055 25.2734C19.4336 25.5547 19.207 25.7812 18.9258 25.9531C18.6445 26.1198 18.3372 26.2031 18.0039 26.2031Z"
+                              fill="white"/>
+                    </svg>
+                    Важная информация
+                </div>
+                <p>На всю продукцию, приобретённую в нашем Интернет-магазине действует гарантийный срок, установленный
+                    заводом-изготовителем. Товары, заказанные в нашем Интернет&nbsp;— магазине принимаются к&nbsp;возврату
+                    и&nbsp;обмену
+                    в&nbsp;течение 7&nbsp;дней со&nbsp;дня&nbsp;продажи согласно ст.&nbsp;25&nbsp;Закона о&nbsp;защите
+                    прав
+                    потребителей. </p>
+                <p>Товар принимается только в&nbsp;заводской упаковке и&nbsp;должен иметь товарный&nbsp;вид. Не&nbsp;принимается
+                    товар, бывший
+                    в&nbsp;употреблении.</p>
+                <p>Доставка является отдельной услугой и&nbsp;не&nbsp;считается неотъемлемой частью приобретаемого
+                    покупателем товара.
+                    Услуга доставки заканчивается в&nbsp;момент получения покупателем товара. </p>
+                <p>Претензии к&nbsp;качеству приобретённого товара, возникшие после&nbsp;его&nbsp;получения,
+                    рассматриваются
+                    в&nbsp;соответствии
+                    с&nbsp;законом РФ&nbsp;«О&nbsp;защите прав потребителей» и&nbsp;гарантийными обязательствами
+                    компании
+                    изготовителя. </p>
+                <p>Приобретение товара с&nbsp;доставкой не&nbsp;даёт покупателю право требовать повторную услугу
+                    доставки
+                    товара,
+                    в&nbsp;случае возникновения необходимости гарантийного обслуживания или&nbsp;замены, а&nbsp;также не&nbsp;даёт
+                    возможности
+                    осуществлять гарантийное обслуживание или&nbsp;замену товара посредством выезда
+                    к&nbsp;покупателю. </p>
+                <p>Приобретение товара с&nbsp;доставкой не&nbsp;подразумевает возможность возврата стоимости оказанной
+                    услуги
+                    по&nbsp;доставке в&nbsp;том&nbsp;случае, когда покупатель имеет право на&nbsp;возврат денег за&nbsp;товар
+                    в&nbsp;соответствии
+                    с&nbsp;«Законом о&nbsp;защите прав потребителей».</p>
+                <div class="rules">
+                    <div>Обращаем ваше внимание на то, что Постановлением Правительства Российской Федерации от
+                        19.01.1998
+                        г. № 55 утвержден перечень товаров, не подлежащих обмену по указанным в настоящем пункте
+                        основаниям.
+                        К данному перечню относятся:
+                    </div>
+                    <ul>
+                        <li>1. Технически сложные товары бытового назначения, на которые установлены гарантийные сроки
+                            (станки металлорежущие и деревообрабатывающие бытовые; электробытовые машины и приборы).
+                        </li>
+                        <li>2. Бытовая радиоэлектронная аппаратура.</li>
+                        <li>3. Бытовая вычислительная и множительная техника.</li>
+                        <li>4. Фото- и киноаппаратура.</li>
+                        <li>5. Телефонные аппараты и факсимильная аппаратура.</li>
+                        <li>6. Электромузыкальные инструменты.</li>
+                        <li>7. Игрушки электронные, бытовое газовое оборудование и устройства.</li>
+                    </ul>
+                </div>
+            </div>
+            <form class="delivery__r">
+                <a href="tel:+74956652920" class="input-with-icon pointer">
+                    <input type="tel" id="order_phone" name="phone" value="+7 (495) 665-29-20">
+                    <img src="./img/input_phone.svg" alt="Phone Icon">
+                </a>
+
+
+                <a href="mailto:info@engo-russia.ru" class="input-with-icon pointer">
+                    <input type="email" id="order_email" name="email" value="info@engo-russia.ru">
+                    <img src="./img/input_email.svg" alt="Email Icon">
+                </a>
+
+                <a href="#" class="input-with-icon textArea">
+                    <div> Адрес пункта выдачи:<br/> 111123, Россия, г. Москва,<br/> ул. 1-я Влядимировская, 10А, оф. 3Б
+                    </div>
+                    <img src="./img/point.svg" alt="Address Icon">
+                </a>
+
+                <div class="input-with-icon textArea">
+                    <div>
+                        <div>
+                            Прием заказов по телефону: <br/>
+                            с 9-00 до 21-00.<br/>
+                        </div>
+                        <div>
+                            Время работы пункта выдачи:<br/> с 9-00 до 18-00 (пн–пт).
+                        </div>
+                    </div>
+                    <img src="./img/time.svg" alt="Address Icon">
+                </div>
+
+                <ul class="d-flex  soclials">
+                    <li><a href="#"><img src="./img/socials.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-1.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-2.svg" alt=""></a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div class="banner" style="background: url('./img/application_form.jpg') center/cover no-repeat">
+        <div class="container">
+            <div class="banner__wrp">
+                <div>
+                    <h2>
+                        Нужна консультация?<br/>
+                        Заполните форму и&nbsp;мы&nbsp;вам перезвоним
+                    </h2>
+                    <form>
+                        <div class="banner__form gap-6">
+                            <div class="  banner__inp">
+                                <img src="./img/input_user.svg" alt="">
+                                <input type="text" placeholder="Имя" id="name" name="name" required>
+                            </div>
+                            <div class="   banner__inp">
+                                <img src="./img/input_phone.svg" alt="">
+                                <input type="tel" placeholder="Телефон" id="phone" name="phone" required>
+                            </div>
+                            <div class="   banner__inp">
+                                <img src="./img/input_email.svg" alt="">
+                                <input type="email" placeholder="E-mail" id="email" name="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-success  ">Отправить</button>
+                        </div>
+
+                    </form>
+                    <p class="banner__form-ps">Нажимая на кнопку, я соглашаюсь на <a href="#">обработку персональных
+                        данных</a>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a href="./index.html" class="d-flex align-items-center mb-3 mb-lg-0  link-body-emphasis text-decoration-none logo">
+                <img src="./img/engo_white.png" alt="">
+            </a>
+            <ul class="nav me-auto">
+                <li class="nav-item"><a href="./index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="./catalog.html" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">О продукте</a></li>
+                <li class="nav-item"><a href="./posts.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="./services.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="./delivery.html" class="nav-link">Доставка и оплата</a></li>
+                <li class="nav-item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="./app.html" class="nav-link link-body-emphasis app">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3678)">
+                        <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"
+                              fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3678">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Приложение ENGO</a>
+        </div>
+
+        <div class="footer__main">
+            <div class="d-flex flex-column footer__cont">
+                <div>
+                    <a href="tel:+74956652920">Тел. +7 (495) 665-29-20</a>
+                    <a href="mailto:info@engo-russia.ru">E-mail: info@engo-russia.ru</a>
+                </div>
+
+                <div>
+                    Адрес пункта выдачи:<br/>
+                    111123, Россия, г. Москва,<br/>
+                    ул. 1-я Влядимировская, 10А, оф. 3Б
+                </div>
+            </div>
+            <div class="d-flex flex-column footer__cont">
+                <div>
+                    Прием заказов по телефону: <br>
+                    с 9-00 до 21-00.
+                </div>
+                <div>
+                    Время работы пункта выдачи: <br>
+                    с 9-00 до 18-00 (пн–пт).
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <div>Напишите нам:</div>
+                <ul class="d-flex gap-3 soclials">
+                    <li><a href="#"><img src="./img/socials.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-1.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-2.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <div>Принимаем к оплате:</div>
+                <ul class="d-flex gap-3">
+                    <li><a href="#"><img src="./img/visa.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/master_card.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/mir.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bot">
+        <div class="container">
+            <div class="footer__bot-wrp">
+                <div>
+                    © Engo-Russia. 2023. Все права защищены. Копирование материалов с сайта запрещено.
+                </div>
+                <a href="#" class="text-decoration-underline">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

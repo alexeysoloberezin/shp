@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <title>Bootstrap Sass &amp; JS</title>
+</head>
+<body>
+<nav class="main-nav bg-success border-bottom d-none d-xl-flex ">
+    <div class="container d-flex align-items-center flex-wrap">
+        <a href="./index.html" class="header_home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_10_2080)">
+                    <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="white"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_10_2080">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+        </a>
+        <ul class="nav me-auto nav_header">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    Каталог
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.05025 1.21725L6 6.16699L10.9497 1.21724" stroke="white" stroke-width="2"/>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Проводные терморегуляторы</a></li>
+                    <li><a class="dropdown-item" href="#">Термоэлектрические приводы</a></li>
+                    <li><a class="dropdown-item" href="#">Интернет термостаты</a></li>
+                    <li><a class="dropdown-item" href="#">Дистанционное управление</a></li>
+                    <li><a class="dropdown-item" href="#">Проводная система управления</a></li>
+                    <li><a class="dropdown-item" href="#">Регуляторы управления насосом</a></li>
+                    <li><a class="dropdown-item" href="#">Аксессуары</a></li>
+                    <li><a class="dropdown-item" href="#">Беспроводные термостаты</a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item"><a href="./about.html" class="nav-link link-body-emphasis px-2">О компании</a></li>
+            <li class="nav-item"><a href="./posts.html" class="nav-link link-body-emphasis px-2">Статьи</a></li>
+            <li class="nav-item"><a href="./services.html" class="nav-link link-body-emphasis px-2">Услуги</a></li>
+            <li class="nav-item"><a href="./delivery.html" class="nav-link link-body-emphasis px-2">Доставка и оплата</a></li>
+            <li class="nav-item"><a href="./contacts.html" class="nav-link link-body-emphasis px-2">Контакты</a></li>
+
+        </ul>
+        <ul class="nav">
+            <li class="nav-item"><a href="./app.html" class="nav-link link-body-emphasis  app">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3678)">
+                        <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"
+                              fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3678">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Приложение ENGO</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="overlay"></div>
+<header class="border-bottom header">
+    <div class="container d-flex align-items-center justify-content-between header-wrp">
+        <a href="./index.html" class="d-flex align-items-center  link-body-emphasis text-decoration-none logo">
+            <img src="./img/engo_gray.png" alt="">
+        </a>
+
+        <div class="d-none align-items-center d-xl-flex header__contacts">
+            <a href="tel:+74956652920" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3664)">
+                        <path d="M20.1916 15.38C18.9616 15.38 17.7716 15.18 16.6616 14.82C16.3116 14.7 15.9216 14.79 15.6516 15.06L14.0816 17.03C11.2516 15.68 8.60164 13.13 7.19164 10.2L9.14164 8.54C9.41164 8.26 9.49164 7.87 9.38164 7.52C9.01164 6.41 8.82164 5.22 8.82164 3.99C8.82164 3.45 8.37164 3 7.83164 3H4.37164C3.83164 3 3.18164 3.24 3.18164 3.99C3.18164 13.28 10.9116 21 20.1916 21C20.9016 21 21.1816 20.37 21.1816 19.82V16.37C21.1816 15.83 20.7316 15.38 20.1916 15.38Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3664">
+                            <rect width="24" height="24" fill="white" transform="translate(0.181641)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                +7 (495) 665-29-20
+            </a>
+            <a href="mailto:info@engo-russia.ru" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_41_2403)">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_41_2403">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                info@engo-russia.ru
+            </a>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 gap-xl-8">
+            <form class=" header_search header_search-main" role="search">
+                <input type="search" class="d-xl-block d-none" placeholder="Поиск по сайту" aria-label="Search">
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                              fill="#9898A0"/>
+                    </svg>
+                </button>
+            </form>
+
+            <a href="./cartPage.html" class="cart">
+                <div class="cart__btn position-relative">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+                              fill="#969696"/>
+                    </svg>
+                    <span class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger text-white fw-semibold">
+                    3
+                </span>
+                </div>
+                <div class="fw-medium d-none d-xl-block">
+                    Корзина
+                </div>
+            </a>
+            <button class="navbar-toggler d-xl-none d-block collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10H35V13H5V10Z" fill="black"/>
+                    <path d="M5 18H35V21H5V18Z" fill="black"/>
+                    <path d="M5 26H35V29H5V26Z" fill="black"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse mobile-panel" id="navbarNav">
+        <form class="w-100 mb-3  header_search" role="search">
+            <input type="search" class="" placeholder="Поиск по сайту" aria-label="Search">
+            <button>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                          fill="#9898A0"/>
+                </svg>
+            </button>
+        </form>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item dropdown"> <!-- Добавьте класс dropdown для элемента меню -->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Каталог
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.05025 1.21725L6 6.16699L10.9497 1.21724" stroke="#575756" stroke-width="2"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu position-static" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Проводные терморегуляторы</a>
+                    <a class="dropdown-item" href="#">Термоэлектрические приводы</a>
+                    <a class="dropdown-item" href="#">Интернет термостаты</a>
+                    <a class="dropdown-item" href="#">Дистанционное управление</a>
+                    <a class="dropdown-item" href="#">Проводная система управления</a>
+                    <a class="dropdown-item" href="#">Регуляторы управления насосом</a>
+                    <a class="dropdown-item" href="#">Аксессуары</a>
+                    <a class="dropdown-item" href="#">Беспроводные термостаты</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+        </ul>
+        <a href="#" class="nav-link link-body-emphasis text-success app-mob">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_60_3678)">
+                    <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_60_3678">
+                        <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            Приложение ENGO</a>
+
+        <div class="divider"></div>
+
+        <div class="d-flex flex-column mobile-panel-cont">
+            <a href="tel:+74956652920" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3664)">
+                        <path d="M20.1916 15.38C18.9616 15.38 17.7716 15.18 16.6616 14.82C16.3116 14.7 15.9216 14.79 15.6516 15.06L14.0816 17.03C11.2516 15.68 8.60164 13.13 7.19164 10.2L9.14164 8.54C9.41164 8.26 9.49164 7.87 9.38164 7.52C9.01164 6.41 8.82164 5.22 8.82164 3.99C8.82164 3.45 8.37164 3 7.83164 3H4.37164C3.83164 3 3.18164 3.24 3.18164 3.99C3.18164 13.28 10.9116 21 20.1916 21C20.9016 21 21.1816 20.37 21.1816 19.82V16.37C21.1816 15.83 20.7316 15.38 20.1916 15.38Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3664">
+                            <rect width="24" height="24" fill="white" transform="translate(0.181641)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                +7 (495) 665-29-20
+            </a>
+            <a href="mailto:info@engo-russia.ru" class="fw-semibold fz-18 d-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_41_2403)">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                              fill="#969696"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_41_2403">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                info@engo-russia.ru
+            </a>
+        </div>
+        <ul class="d-flex gap-3 mt-3" style="margin-bottom: 0">
+            <li><a href="#"><img src="./img/socials.svg" alt=""></a>
+            </li>
+            <li><a href="#"><img src="./img/socials-1.svg" alt=""></a>
+            </li>
+            <li><a href="#"><img src="./img/socials-2.svg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mob-search d-none">
+        <div class="d-flex align-items-center gap-4" style="padding: 0 18px">
+            <svg class="header_search-back pointer" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 7L3.83 7L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9L16 9V7Z" fill="#979797"/>
+            </svg>
+            <form class="w-100 header_search " role="search">
+                <input type="search" class="" placeholder="Поиск по сайту" aria-label="Search">
+                <button>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.5 0C8.22391 0 9.87721 0.684819 11.0962 1.90381C12.3152 3.12279 13 4.77609 13 6.5C13 8.11 12.41 9.59 11.44 10.73L11.71 11H12.5L17.5 16L16 17.5L11 12.5V11.71L10.73 11.44C9.59 12.41 8.11 13 6.5 13C4.77609 13 3.12279 12.3152 1.90381 11.0962C0.684819 9.87721 0 8.22391 0 6.5C0 4.77609 0.684819 3.12279 1.90381 1.90381C3.12279 0.684819 4.77609 0 6.5 0ZM6.5 2C4 2 2 4 2 6.5C2 9 4 11 6.5 11C9 11 11 9 11 6.5C11 4 9 2 6.5 2Z"
+                              fill="#9898A0"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <ul class="bread">
+            <li>
+                <a class="bread__link" href="#">Главная</a>
+            </li>
+            <li>
+                <a class="bread__link" href="#">Статьи</a>
+            </li>
+            <li>
+                <a class="bread__link" href="#">Дистанционное управление котлом</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container">
+        <div class="postZoom__head">
+            <div class="posts-item-date">
+                25 ноября 2023 г.
+            </div>
+            <h1>Дистанционное управление котлом</h1>
+        </div>
+        <div class="postZoom">
+            <div class="postZoom__l">
+                <img src="./img/postZoom1.jpg" alt="">
+                <p>Дистанционное управление котлом отопления представляет собой комплекс технического оборудования,
+                    предназначенного для удаленного регулирования системы домашнего отопления. Сегодня представлено
+                    огромное количество оборудования, с помощью которого осуществляется удаленный контроль над
+                    котлом и его функциями. В этой статье будут описаны основные способы и&nbsp;методы по
+                    дистанционному управлению закрытого отопительного контура в доме.</p>
+                <div class="hrefTitle" id="t1">
+                    <h2 >Для чего нужно дистанционное управление газовым котлом отопления?</h2>
+                </div>
+                <p>
+                    Как правило, выделяются две главные причины:
+                </p>
+                <ul class="listBold">
+                    <li>1. Безопасность.</li>
+                    <li>2. Экономическая целесообразность.</li>
+                </ul>
+                <p>Котел — это сложное техническое газовое оборудование, неправильная работа которого представляет
+                    большую угрозу для жизни и здоровья проживающих. С помощью дистанционного контроля можно в любую
+                    минуту узнать техническое состояние оборудования и проконтролировать его работу. Любые неполадки
+                    мгновенно отображаются на экране устройства и предупреждают пользователя о потенциальной угрозе.
+                    Таким образом, с помощью удаленного контроля можно заранее выявить неисправность, устранить ее и
+                    не подвергать близких угрозе.</p>
+                <p>Благодаря дистанционному включению котла отопления можно эффективно управлять температурой в
+                    помещении, что позволит существенно снизить стоимость отопления. Например, при выходе из дома
+                    нет смысла включать котел на полную мощность, а потому его можно вовсе отключить. Таким образом,
+                    достигается оптимизация расходов на газ и электроэнергию, что крайне положительно скажется на
+                    финансовом счете.</p>
+                <p>Помимо вышеперечисленных причин нельзя не отметить еще одну - удобство. Она не является
+                    приоритетной, однако позволяет быстро, легко и эргономично управлять всей системой отопления в
+                    доме. Достаточно открыть приложение в телефоне или на компьютере и выставить нужные параметры.
+                    Все это делается несколькими нажатиями пальцев.</p>
+
+                <div class="hrefTitle" id="t2"><h2 >Возможности системы дистанционного управления газовым котлом</h2>
+                </div>
+
+                <p>«Удаленное управление газовым котлом» представляет собой довольно широкое понятие, которое не&nbsp;говорит
+                    о чем-то конкретном. Поэтому следует детальнее разобраться с возможностями дистанционного
+                    управления. С помощью таких комплексов можно:</p>
+                <ul class="withDots withDots-success">
+                    <li>устанавливать определенную температуру во всем доме;</li>
+                    <li>предотвращать разморозку отопительной системы (трубы);</li>
+                    <li>устанавливать нужную температуру в определенное время;</li>
+                    <li>контролировать техническое состояние газового оборудования;</li>
+                    <li>устанавливать индивидуальную температуру в каждой комнате;</li>
+                    <li>заблаговременно включать котел и прогревать дом до посещения.</li>
+                </ul>
+                <p>Все вышеперечисленное является только базовыми функциями, а не всеми существующими. Современные
+                    комплексы управления отличаются друг от друга по набору возможностей, но&nbsp;вышеперечисленные
+                    есть во всех системах, без исключения.</p>
+
+                <div class="hrefTitle" id="t3">   <h2 >Ключевые преимущества удаленного управления котлом</h2>
+                </div>
+
+                <div class="trigers">
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Предупреждение об&nbsp;аварийных ситуациях</div>
+                    </div>
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Возможность значительно снизить расходы</div>
+                    </div>
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Возможность управления отоплением через телефон</div>
+                    </div>
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Возможность поддерживать разные режимы работы</div>
+                    </div>
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Возможность устанавливать разную температуру в&nbsp;комнатах</div>
+                    </div>
+                    <div class="trigers-it">
+                        <img src="./img/check.svg" alt="">
+                        <div>Увеличение срока службы котлов за счет анализа их&nbsp;состояния</div>
+                    </div>
+                </div>
+                <p>Помимо вышеперечисленных преимуществ можно также упомянуть комфорт и удобство.
+                    Времяпрепровождение в любимом доме станет намного лучше с более детальным контролем системы
+                    отопления.</p>
+
+                <div class="hrefTitle" id="t4"> <h2 >Виды управления газовым котлом</h2>
+                </div>
+
+                <img src="./img/postZoom2.jpg" alt="">
+                <p>Оно делится на две большие категории, которые отличаются друг от друга набором оборудования.
+                    Удаленное управление отопительной системой может происходить через:</p>
+                <ul class="withDots withDots-success">
+                    <li>GSM модули;</li>
+                    <li>Wi-Fi.</li>
+                </ul>
+                <p>Выбор того или иного способа управления зависит исключительно от возможностей пользователя.
+                    Например, во многих домах отсутствует интернет- соединение, а потому рассматривать к покупке
+                    следует GSM.</p>
+
+                <div class="hrefTitle" id="t5"><h2 >Удаленное управление газовым котлом отопления через GSM модуль</h2>
+                </div>
+
+                <p>GSM модуль представляет собой устройство, которое подключается к сотовой сети. Для его работы
+                    требуется обыкновенная SIM-карта. Управление котлом осуществляется с помощью SMS-сообщений.
+                    Пользователь вводит на нужный номер телефона определенный команды и устройство их выполняет. Все
+                    современные смартфоны (Apple и Android) поддерживают стабильную работу с GSM аппаратурой.
+                </p>
+                <p>Ключевое преимущество данной системы дистанционного управления газовым котлом — это отсутствие
+                    необходимости в интернете. GSM модуль легко подключается к котлу и без проблем принимает команды
+                    через телефон. В случае каких-либо сбоев пользователю придут соответствующие сообщения.
+                    Единственный недостаток - это сомнительное удобство. Конечно, управление котлом через GSM модуль
+                    не сравнится по простоте с обыкновенным приложением, но в случае отсутствия интернета данный
+                    способ подойдет как нельзя кстати.</p>
+                <div class="hrefTitle" id="t6">  <h2 >Управление газовым котлом через интернет с помощью Wi&nbsp;-&nbsp;Fi</h2>
+                </div>
+
+                <p>Для этого потребуется стабильное интернет-соединение, стандартный Wi-Fi роутер и
+                    интернет-термостат.
+                    Управление отоплением происходит через специальное приложение, которое устанавливается на
+                    телефон
+                    пользователя. Как правило, подобные программы интуитивно понятны, а&nbsp;их интерфейс очень
+                    дружелюбен.</p>
+                <p>Ключевое преимущество управления газовым котлом по интернету - это простота. Взять телефон,
+                    открыть
+                    приложение и нажать на пару кнопок не является трудной задачей. Более того, на экране устройство
+                    всегда показывается техническое состояние оборудование, так что можно не ждать тревожных
+                    сообщений,
+                    а самостоятельно убедиться в работоспособности оборудования. Управление через Wi-Fi подходит
+                    даже
+                    для старого газового оборудования, которое нельзя назвать современным. Единственный недостаток
+                    данного метода — необходимость в интернет-подключении. К сожалению, во многих домах оно
+                    по-прежнему
+                    отсутствует.</p>
+                <img src="./img/postZoom4.jpg" alt="">
+                <p>Подводя итог, система дистанционного управления газовым котлом — это отличное решение для
+                    экономии денежных средств и повышения уровня безопасности в доме. Также удаленный контроль над
+                    отоплением однозначно сделает жизнь домочадцев лучше и комфортнее.</p>
+                <div class="postZoom-end d-flex justify-content-between">
+                    <a href="/posts.html" class="postZoom-end-btn">
+                        <div class="postZoom-end-circle">
+                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="black"/>
+                                <path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="black"
+                                      fill-opacity="0.2"/>
+                                <path d="M18 5H3.83L7.41 1.41L6 0L0 6L6 12L7.41 10.59L3.83 7H18V5Z" fill="black"
+                                      fill-opacity="0.2"/>
+                            </svg>
+                        </div>
+                        Все статьи
+                    </a>
+                    <div class="posts-item-date">25.10.2023</div>
+                </div>
+            </div>
+            <div class="postZoom__r">
+                <div class="postZoom__r-title">
+                    Содержание
+                </div>
+                <a href="#t1" class="postZoom__r-it">
+                    Для чего нужно дистанционное управление газовым котлом отопления?
+                </a>
+                <a href="#t2" class="postZoom__r-it">
+                    Возможности системы дистанционного управления газовым котлом?
+                </a>
+                <a href="#t3" class="postZoom__r-it">
+                    Ключевые преимущества удаленного управления котлом
+                </a>
+                <a href="#t4" class="postZoom__r-it">
+                    Виды управления газовым котлом
+                </a>
+                <a href="#t5" class="postZoom__r-it">
+                    Удаленное управление газовым котлом отопления через GSM модуль
+                </a>
+                <a href="#t6" class="postZoom__r-it">
+                    Управление газовым котлом через интернет с&nbsp;помощью Wi-Fi
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner" style="background: url('./img/application_form.jpg') center/cover no-repeat">
+        <div class="container">
+            <div class="banner__wrp">
+                <div>
+                    <h2>
+                        Нужна консультация?<br/>
+                        Заполните форму и&nbsp;мы&nbsp;вам перезвоним
+                    </h2>
+                    <form>
+                        <div class="banner__form gap-6">
+                            <div class="  banner__inp">
+                                <img src="./img/input_user.svg" alt="">
+                                <input type="text" placeholder="Имя" id="name" name="name" required>
+                            </div>
+                            <div class="   banner__inp">
+                                <img src="./img/input_phone.svg" alt="">
+                                <input type="tel" placeholder="Телефон" id="phone" name="phone" required>
+                            </div>
+                            <div class="   banner__inp">
+                                <img src="./img/input_email.svg" alt="">
+                                <input type="email" placeholder="E-mail" id="email" name="email" required>
+                            </div>
+                            <button type="submit" class="btn btn-success  ">Отправить</button>
+                        </div>
+
+                    </form>
+                    <p class="banner__form-ps">Нажимая на кнопку, я соглашаюсь на <a href="#">обработку персональных
+                        данных</a>.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a href="./index.html" class="d-flex align-items-center mb-3 mb-lg-0  link-body-emphasis text-decoration-none logo">
+                <img src="./img/engo_white.png" alt="">
+            </a>
+            <ul class="nav me-auto">
+                <li class="nav-item"><a href="./index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="./catalog.html" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">О продукте</a></li>
+                <li class="nav-item"><a href="./posts.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="./services.html" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="./delivery.html" class="nav-link">Доставка и оплата</a></li>
+                <li class="nav-item"><a href="./contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <a href="./app.html" class="nav-link link-body-emphasis app">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_60_3678)">
+                        <path d="M18 1.01L8 1C6.9 1 6 1.9 6 3V6H8V5H18V19H8V18H6V21C6 22.1 6.9 23 8 23H18C19.1 23 20 22.1 20 21V3C20 1.9 19.1 1.01 18 1.01ZM10 15H12V8H5V10H8.59L3 15.59L4.41 17L10 11.41V15Z"
+                              fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_60_3678">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Приложение ENGO</a>
+        </div>
+
+        <div class="footer__main">
+            <div class="d-flex flex-column footer__cont">
+                <div>
+                    <a href="tel:+74956652920">Тел. +7 (495) 665-29-20</a>
+                    <a href="mailto:info@engo-russia.ru">E-mail: info@engo-russia.ru</a>
+                </div>
+
+                <div>
+                    Адрес пункта выдачи:<br/>
+                    111123, Россия, г. Москва,<br/>
+                    ул. 1-я Влядимировская, 10А, оф. 3Б
+                </div>
+            </div>
+            <div class="d-flex flex-column footer__cont">
+                <div>
+                    Прием заказов по телефону: <br>
+                    с 9-00 до 21-00.
+                </div>
+                <div>
+                    Время работы пункта выдачи: <br>
+                    с 9-00 до 18-00 (пн–пт).
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <div>Напишите нам:</div>
+                <ul class="d-flex gap-3 soclials">
+                    <li><a href="#"><img src="./img/socials.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-1.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/socials-2.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column gap-3">
+                <div>Принимаем к оплате:</div>
+                <ul class="d-flex gap-3">
+                    <li><a href="#"><img src="./img/visa.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/master_card.svg" alt=""></a>
+                    </li>
+                    <li><a href="#"><img src="./img/mir.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bot">
+        <div class="container">
+            <div class="footer__bot-wrp">
+                <div>
+                    © Engo-Russia. 2023. Все права защищены. Копирование материалов с сайта запрещено.
+                </div>
+                <a href="#" class="text-decoration-underline">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
