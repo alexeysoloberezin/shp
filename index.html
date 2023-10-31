@@ -556,6 +556,25 @@
         </div>
     </section>
 
+
+    <div class="modal fade" id="successSended" tabindex="-1" aria-labelledby="successSendedLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content modal-successSended" action="#">
+                <button type="button" class="btn-close-modal text-white" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 3L3 21" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M3 3L21 21" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                </button>
+                <div  class="modal-body">
+                    <h2 class="text-center">Спасибо за заказ!</h2>
+                    <p class="modal-successSended-txt">Наш менеджер свяжется с вами&nbsp;в&nbsp;ближайшее время.</p>
+                    <button class="btn btn-success">Понятно</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="banner" style="background: url('./img/application_form.jpg') center/cover no-repeat">
         <div class="container">
             <div class="banner__wrp">
@@ -568,17 +587,17 @@
                         <div class="banner__form gap-6">
                             <div class="  banner__inp">
                                 <img src="./img/input_user.svg" alt="">
-                                <input type="text" placeholder="Имя" id="name" name="name" required>
+                                <input type="text" placeholder="Имя" id="name" name="name" >
                             </div>
                             <div class="   banner__inp">
                                 <img src="./img/input_phone.svg" alt="">
-                                <input type="tel" placeholder="Телефон" id="phone" name="phone" required>
+                                <input type="tel" placeholder="Телефон" id="phone" name="phone" >
                             </div>
                             <div class="   banner__inp">
                                 <img src="./img/input_email.svg" alt="">
-                                <input type="email" placeholder="E-mail" id="email" name="email" required>
+                                <input type="email" placeholder="E-mail" id="email" name="email" >
                             </div>
-                            <button type="submit" class="btn btn-success  ">Отправить</button>
+                            <button type="submit" class="btn btn-success prevent " data-bs-toggle="modal" data-bs-target="#successSended">Отправить</button>
                         </div>
 
                     </form>
