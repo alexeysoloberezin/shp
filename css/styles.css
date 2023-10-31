@@ -13264,7 +13264,9 @@ a {
 
 .header__contacts {
     margin: 0 0 0 7px;
-    grid-gap: 30px
+}
+.header__contacts>*:first-child{
+    margin-right: 30px;
 }
 
 .header_search {
@@ -14423,7 +14425,14 @@ section h1, section .h1 {
 .footer {
     background: #262626
 }
-
+.soclials{
+}
+.soclials>*{
+    margin-right: 8px;
+}
+.footer .d-flex .d-flex>*{
+    margin-right: 8px;
+}
 @media (max-width: 1200px) {
     .footer .soclials {
         margin-top: -6px;
@@ -14451,10 +14460,11 @@ section h1, section .h1 {
 
 .footer .nav {
     margin-left: 59px;
-    grid-gap: 31px;
     padding-top: 4px
 }
-
+.footer .nav .nav-item{
+    margin-right: 30px;
+}
 @media (max-width: 1200px) {
     .footer .nav {
         -webkit-box-ordinal-group: 2;
@@ -14566,8 +14576,8 @@ section h1, section .h1 {
     color: #95c11f
 }
 
-.footer__cont {
-    grid-gap: 16px
+.footer__cont>*:first-child  {
+    padding-bottom: 16px;
 }
 
 .footer__main {
@@ -16908,7 +16918,6 @@ ul, li {
 .delivery__r .soclials {
     padding-left: 14px;
     padding-top: 13px;
-    gap: 13px
 }
 
 @media (max-width: 1000px) {
