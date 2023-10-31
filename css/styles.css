@@ -13457,25 +13457,52 @@ p {
     line-height: 136%
 }
 
-.mainBanner {
-    background: url("../img/mainBannerDesc.jpg") center/cover no-repeat
+.mainBanner .carousel-item {
+    position: relative;
 }
 
-@media (max-width: 768px) {
-    .mainBanner {
-        background: url("../img/mainBannerMob_bg.jpg") center/cover no-repeat
-    }
+.mainBanner .carousel-item-bg-mob {
+    width: 100%;
+    height: calc(100% - 200px);
+    min-height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 @media (min-width: 769px) {
+    .mainBanner .carousel-item-bg {
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .mainBanner .carousel-item {
         min-height: 540px
     }
+
+    .mainBanner .carousel-item-bg-mob {
+        display: none;
+    }
+}
+
+.mainBanner .carousel-item-img {
+    position: static;
+    height: 220px !important;
+    object-fit: cover;
+    max-width: 440px;
 }
 
 @media (max-width: 768px) {
     .mainBanner .carousel-item {
-        padding: 24px 0 4px
+        padding: 0px 0 4px
+    }
+
+    .mainBanner .carousel-item-bg-desc {
+        display: none;
     }
 }
 
@@ -13501,22 +13528,36 @@ p {
     line-height: 125%
 }
 
+.mainBanner__item {
+    position: relative;
+    z-index: 5;
+    padding-bottom: 40px;
+}
+
 @media (min-width: 769px) {
     .mainBanner__item {
         min-height: 500px;
-        padding-bottom: 50px
+        padding-bottom: 50px;
+        padding-top: 24px;
     }
 }
 
 .mainBanner .carousel-controls {
     width: 100vw;
-    color: #fff
+    color: #fff;
+    z-index: 10;
+    position: relative;
 }
-
+.mainBanner .carousel-controls {
+    position: absolute;
+    bottom: 40px;
+    left: 0
+}
 @media (max-width: 768px) {
     .mainBanner .carousel-controls {
         padding-bottom: 24px;
-        padding-left: 18px
+        padding-left: 18px;
+        bottom: 0;
     }
 
     .mainBanner .carousel-controls * {
@@ -13524,13 +13565,8 @@ p {
     }
 }
 
-@media (min-width: 769px) {
-    .mainBanner .carousel-controls {
-        position: absolute;
-        bottom: 40px;
-        left: 0
-    }
-}
+
+
 
 .mainBanner .carousel-controls .container {
     padding: 0 2px;
@@ -13828,6 +13864,22 @@ section h1, section .h1 {
         height: 40px
     }
 }
+@media (max-width: 360px) {
+    .categories__it-badge {
+        font-size: 14px;
+        height: 40px
+    }
+}
+@media (max-width: 330px) {
+    .categories__it-badge {
+        font-size: 13px;
+        height: 40px
+    }
+}
+.categories__it:hover .categories__it-badge{
+    color: #fff;
+    background-color: #84ab1b !important
+}
 
 .categories__it-badge:hover {
     color: #fff;
@@ -14052,13 +14104,15 @@ section h1, section .h1 {
 
 .shop_item .fz-18.fw-medium {
     margin-top: 8px;
-    line-height: 1.35
+    line-height: 1.35;
+    flex-grow: 1;
 }
 
 @media (max-width: 1000px) {
     .shop_item .fz-18.fw-medium {
         font-size: 16px;
-        margin-top: 3px
+        margin-top: 3px;
+        min-height: 44px;
     }
 }
 
@@ -15032,7 +15086,14 @@ ul, li {
     align-items: center;
     grid-gap: 12px
 }
-
+.counter__val input{
+    width: 34px;
+    height: 32px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: none;
+}
 .counter > div {
     width: 32px;
     display: -webkit-box;
@@ -15050,7 +15111,11 @@ ul, li {
     -ms-user-select: none;
     user-select: none
 }
-
+@media (max-width: 330px) {
+    .counter > div{
+        width: 23px !important;
+    }
+}
 .counter > div:nth-child(2) {
     font-weight: 600
 }
@@ -15760,6 +15825,7 @@ ul, li {
         -ms-flex-direction: row !important;
         flex-direction: row !important;
         width: calc(100% - 45px);
+        font-size: 14px;
         margin: 24px 0 13px
     }
 

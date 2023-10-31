@@ -6,6 +6,13 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
     new bootstrap.Popover(popover)
   })
 
+const stopList = document.querySelectorAll('.stop')
+stopList.forEach(el => {
+  el.addEventListener('click', function (e){
+    e.stopPropagation()
+    e.preventDefault()
+  })
+})
 
 const myCarousel = document.getElementById('myCarousel');
 if (myCarousel) {
@@ -79,7 +86,7 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 2,
       spaceBetween: 24,
     },
-    768: {
+    820: {
       slidesPerView: 3,
       spaceBetween: 24,
     },
@@ -129,31 +136,39 @@ zoomItemSLider()
 function counters() {
   var counters = document.querySelectorAll('.counter');
 
-// Обработчик события для всех счетчиков
   counters.forEach(function (counter) {
     var decButton = counter.querySelector('.counter__dev');
     var incButton = counter.querySelector('.counter__inc');
-    var counterValue = counter.querySelector('.counter__val');
+    var counterValue = counter.querySelector('.counter__val input');
 
-    var count = 1; // Изначальное значение счетчика
+    var count = parseInt(counterValue.value, 10) || 1;
 
-    // Обработчик события для уменьшения значения счетчика
     decButton.addEventListener('click', function () {
       if (count > 1) {
         count--;
-        counterValue.textContent = count;
+        counterValue.value = count;
       }
     });
 
-    // Обработчик события для увеличения значения счетчика
     incButton.addEventListener('click', function () {
       count++;
-      counterValue.textContent = count;
+      counterValue.value = count;
+    });
+
+    // Обработка изменения значения вручную
+    counterValue.addEventListener('change', function () {
+      var newValue = parseInt(counterValue.value, 10);
+      if (!isNaN(newValue) && newValue >= 1) {
+        count = newValue;
+      } else {
+        counterValue.value = count; // Вернуть предыдущее значение, если введено некорректное значение
+      }
     });
   });
 }
 
-counters()
+counters();
+
 
 
 function tabs() {
