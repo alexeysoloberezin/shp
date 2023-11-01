@@ -12939,7 +12939,7 @@ body, html {
     height: 3px;
     background: #fff;
     position: absolute;
-    bottom: -9px;
+    bottom: -3px;
     left: 0;
     opacity: 0;
     -webkit-transition: .3s;
@@ -13123,9 +13123,20 @@ a {
 }
 
 .header .nav-item {
-    margin-right: 5px
+    margin-right: 5px;
+    position: relative;
 }
-
+.header .nav-item:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    opacity: 0.4;
+    height: 3px;
+    background: #fff;
+}
 .header .navbar-toggler {
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -13621,8 +13632,11 @@ section h1, section .h1 {
 }
 
 .btn-success:hover {
-    background-color: #84ab1b !important;
-    color: #fff
+    background-color: #83B008 !important;
+    color: #fff;
+    border-color: transparent;
+    box-shadow: none !important;
+    outline: none;
 }
 
 .categories__wrp {
@@ -13883,11 +13897,11 @@ section h1, section .h1 {
     transition: .2s;
 }
 .categories__it:hover{
-    border-color: #84ab1b;
+    border-color: #83B008;
 }
 .categories__it:hover .categories__it-badge{
     color: #fff;
-    background-color: #84ab1b !important
+    background-color: #83B008 !important
 }
 .categories__it-img{
     transition: .35s ease;
@@ -13899,7 +13913,7 @@ section h1, section .h1 {
 }
 .categories__it-badge:hover {
     color: #fff;
-    background-color: #84ab1b !important
+    background-color: #83B008 !important
 }
 
 .swiper, .swiper-wrapper {
@@ -13932,7 +13946,9 @@ section h1, section .h1 {
 .btn-success {
     color: #fff;
     background: #95c11f;
-    border: none
+    border: none;
+    box-shadow: none !important;
+    outline: none;
 }
 
 .btn {
@@ -14089,9 +14105,19 @@ section h1, section .h1 {
     background: var(--white, #FFF);
     -webkit-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, .12);
     box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, .12);
-    padding: 24px
+    padding: 24px;
+    transition: .15s;
 }
-
+.shop_item:hover{
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.shop_item:hover .btn-success{
+    background-color: #83B008 !important;
+    color: #fff;
+    border-color: transparent;
+    box-shadow: none !important;
+    outline: none;
+}
 @media (max-width: 1000px) {
     .shop_item {
         padding: 16px
