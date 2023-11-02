@@ -12916,7 +12916,28 @@ body, html {
     padding: 4px 0 0 0;
     letter-spacing: .7px
 }
-
+.app, .header_home{
+    position: relative;
+}
+.app:before, .header_home:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
+}
+.header_home:before{
+    bottom: -11px;
+}
+.app:hover:before, .header_home:hover:before{
+    opacity: 0.4;
+}
 .app svg {
     margin-right: 2px
 }
@@ -13632,7 +13653,7 @@ section h1, section .h1 {
 }
 
 .btn-success:hover {
-    background-color: #83B008 !important;
+    background-color: #3d500a !important;
     color: #fff;
     border-color: transparent;
     box-shadow: none !important;
@@ -13897,11 +13918,11 @@ section h1, section .h1 {
     transition: .2s;
 }
 .categories__it:hover{
-    border-color: #83B008;
+    border-color: #3d500a;
 }
 .categories__it:hover .categories__it-badge{
     color: #fff;
-    background-color: #83B008 !important
+    background-color: #3d500a !important
 }
 .categories__it-img{
     transition: .35s ease;
@@ -13913,7 +13934,7 @@ section h1, section .h1 {
 }
 .categories__it-badge:hover {
     color: #fff;
-    background-color: #83B008 !important
+    background-color: #3d500a !important
 }
 
 .swiper, .swiper-wrapper {
@@ -14112,7 +14133,7 @@ section h1, section .h1 {
     box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.25)
 }
 .shop_item:hover .btn-success{
-    background-color: #83B008 !important;
+    background-color: #3d500a !important;
     color: #fff;
     border-color: transparent;
     box-shadow: none !important;
