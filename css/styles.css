@@ -12923,7 +12923,7 @@ body, html {
     content: "";
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: #dcdcdc;
     position: absolute;
     bottom: -9px;
     left: 0;
@@ -12932,11 +12932,14 @@ body, html {
     -o-transition: .3s;
     transition: .3s
 }
+.footer .app:before{
+    background: rgba(255, 255, 255, 0.5);
+}
 .header_home:before{
     bottom: -11px;
 }
 .app:hover:before, .header_home:hover:before{
-    opacity: 0.4;
+    opacity: 0.9;
 }
 .app svg {
     margin-right: 2px
@@ -12958,7 +12961,7 @@ body, html {
     content: "";
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: #dcdcdc;
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -12973,7 +12976,7 @@ body, html {
 }
 
 .nav_header .nav-link:hover:before {
-    opacity: .4
+    opacity: .8
 }
 
 .nav_header .nav-link:hover, .nav_header .nav-link:focus {
