@@ -6,6 +6,26 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
     new bootstrap.Popover(popover)
   })
 
+
+const allReviewsBtn = document.querySelector('.allreviews')
+const res = document.querySelectorAll('.reviews-item')
+res.forEach((el, i) => {
+  if(i > 3){
+    el.classList.add('d-none')
+  }
+})
+if(allReviewsBtn){
+  allReviewsBtn.addEventListener('click', function (){
+    const res = document.querySelectorAll('.reviews-item')
+    res.forEach(el => {
+      el.classList.remove('d-none')
+    })
+    this.classList.add('d-none')
+  })
+}
+
+
+
 const stopList = document.querySelectorAll('.stop')
 stopList.forEach(el => {
   el.addEventListener('click', function (e){

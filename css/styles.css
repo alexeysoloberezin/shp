@@ -12925,7 +12925,7 @@ body, html {
     height: 3px;
     background: #dcdcdc;
     position: absolute;
-    bottom: -9px;
+    bottom: -6px;
     left: 0;
     opacity: 0;
     -webkit-transition: .3s;
@@ -12936,7 +12936,7 @@ body, html {
     background: rgba(255, 255, 255, 0.5);
 }
 .header_home:before{
-    bottom: -11px;
+    bottom: -8px;
 }
 .app:hover:before, .header_home:hover:before{
     opacity: 0.9;
@@ -12963,7 +12963,7 @@ body, html {
     height: 3px;
     background: #dcdcdc;
     position: absolute;
-    bottom: -3px;
+    bottom: 0px;
     left: 0;
     opacity: 0;
     -webkit-transition: .3s;
@@ -13153,7 +13153,7 @@ a {
 .header .nav-item:before{
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 0;
     display: block;
     width: 100%;
@@ -13920,8 +13920,23 @@ section h1, section .h1 {
     overflow: hidden;
     transition: .2s;
 }
+.categories__it-bg{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    object-fit: cover !important;
+    transform: none !important;
+    width: 100%;
+    height: 100%;
+    z-index: 2 !important;
+    opacity: 0.2;
+    transition: .3s;
+}
 .categories__it:hover{
     border-color: #4a610d;
+}
+.categories__it:hover .categories__it-bg{
+    opacity: 0.35;
 }
 .categories__it:hover .categories__it-badge{
     color: #fff;
@@ -14135,13 +14150,7 @@ section h1, section .h1 {
 .shop_item:hover{
     box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.25)
 }
-.shop_item:hover .btn-success{
-    background-color: #4a610d !important;
-    color: #fff;
-    border-color: transparent;
-    box-shadow: none !important;
-    outline: none;
-}
+
 @media (max-width: 1000px) {
     .shop_item {
         padding: 16px
@@ -17509,9 +17518,14 @@ ul, li {
         margin: 50px auto
     }
 }
-
+.allreviews{
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+}
 .modal-successSended-txt {
     max-width: 290px;
+    text-align: center;
     margin: 8px 0 24px
 }
 

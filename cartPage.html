@@ -444,16 +444,32 @@
                         Итого:
                         <div class="cartPage-price">65 572 ₽</div>
                     </div>
-                    <button class="btn btn-success">
+                    <div class="btn btn-success  prevent" data-bs-toggle="modal" data-bs-target="#modalOrder">
                         Оформить заказ
-                    </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-
+    <div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content modal-successSended" action="#">
+                <button type="button" class="btn-close-modal text-white" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 3L3 21" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M3 3L21 21" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                    </svg>
+                </button>
+                <div  class="modal-body">
+                    <h2 class="text-center">Спасибо за ваш заказ!</h2>
+                    <p class="modal-successSended-txt">Наш менеджер свяжется с вами&nbsp;в&nbsp;ближайшее время.</p>
+                    <button class="btn btn-success">Понятно</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="modal fade" id="successSended" tabindex="-1" aria-labelledby="successSendedLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content modal-successSended" action="#">
@@ -464,7 +480,7 @@
                     </svg>
                 </button>
                 <div  class="modal-body">
-                    <h2 class="text-center">Спасибо за заказ!</h2>
+                    <h2 class="text-center">Спасибо</h2>
                     <p class="modal-successSended-txt">Наш менеджер свяжется с вами&nbsp;в&nbsp;ближайшее время.</p>
                     <button class="btn btn-success">Понятно</button>
                 </div>
