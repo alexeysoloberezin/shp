@@ -15,12 +15,26 @@ res.forEach((el, i) => {
   }
 })
 if(allReviewsBtn){
+  let toggle = false
   allReviewsBtn.addEventListener('click', function (){
     const res = document.querySelectorAll('.reviews-item')
-    res.forEach(el => {
-      el.classList.remove('d-none')
-    })
-    this.classList.add('d-none')
+
+    if(toggle){
+      res.forEach((el, i) => {
+        if(i > 3){
+          el.classList.add('d-none')
+        }
+      })
+      this.textContent = 'Показать все...'
+    }else{
+      res.forEach(el => {
+        el.classList.remove('d-none')
+      })
+      this.textContent = 'Свернуть отзывы'
+    }
+
+
+    toggle = !toggle
   })
 }
 
